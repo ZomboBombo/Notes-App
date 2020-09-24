@@ -1,0 +1,29 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "Application for Notes management.",
+  "scripts": {
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZomboBombo/Notes-App.git"
+  },
+  "author": "Sergey Novikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZomboBombo/Notes-App/issues"
+  },
+  "homepage": "https://github.com/ZomboBombo/Notes-App#readme"
+}
