@@ -7,7 +7,7 @@ ____________________
 ____________________
 
 */
-window.notesMock = (function () {
+window.mock = (function () {
   // *** Моки для Заметок ***
   var NOTES = [
     {"number":1,"name":"Regrant","description":"Re-contextualized client-server methodology","date":"3/13/2020"},
@@ -44,4 +44,8 @@ window.notesMock = (function () {
 
   window.renderNote(NOTES);
 
+
+  return {
+    fakeNotes: NOTES
+  };
 })();
