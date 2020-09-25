@@ -29,6 +29,21 @@ window.sortByDate = (function () {
   // *** Функция для перерендеринга заметок ***
   var updateNotes = function (data) {
     window.renderNote(data);
+
+    console.log(data);
+
+    var notesList = document.querySelector(".notes-list");
+    var notesItems = notesList.querySelectorAll(".notes-list__item");
+    var editButtons = notesList.querySelectorAll("#editNoteButton"); // --- Коллекция кнопок для редактирования
+    var removeButtons = notesList.querySelectorAll("#removeNoteButton"); // --- Коллекция кнопок для удаления
+
+
+    // *** Сопоставление ID заметок с ID их кнопок ***
+    for (var i = 0; i < notesItems.length; i++) {
+      notesItems[i].id = i;
+      editButtons[i].id += i;
+      removeButtons[i].id += i;
+    }
   };
 
 
