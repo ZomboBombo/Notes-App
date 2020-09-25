@@ -16,21 +16,36 @@ window.sortByDate = (function () {
 
   // ********* DOM-элементы *********
   var sortByDateButton = document.querySelector("#sortByDateButton");
-
-  var dates = [
-    "March/22/2020",
-    "January/01/2020",
-    "February/13/2020",
-    "June/15/2020",
-    "August/08/2018"
-  ];
+  var notes = document.querySelectorAll(".notes-list__item"); // --- Коллекция заметок
+  var noteCreationDates = document.querySelectorAll(".note__creation-date"); // --- Коллекция дат создания заметок
 
 
+  /*
+  ----------------------------------------------------------------------------------
+  --------------------------------- ОСНОВНАЯ ЛОГИКА --------------------------------
+  ----------------------------------------------------------------------------------
+  */
 
-  var sortedDates = dates.sort((a, b) => {
-    return  a - b;
+  // *** Функция для перерендеринга заметок ***
+  var updateNotes = function (data) {
+    window.renderNote(data);
+  };
+
+
+  // *** Обработчик события клика на кнопку сортировки заметок по дате (от старых к новым) ***
+  sortByDateButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+
+    // --- Сортировка массива заметок по дате ---
+    var sortedNotes = window.mock.fakeNotes.sort((a, b) => {
+      var dateA = new Date (a.date);
+      var dateB = new Date (b.date);
+
+      return dateA - dateB;
+    });
+
+    // --- Перерендеринг страницы ---
+    updateNotes(sortedNotes);
   });
-
-  console.log(sortedDates);
 
 })();
