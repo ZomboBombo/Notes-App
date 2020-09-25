@@ -29,8 +29,7 @@ window.sortByDate = (function () {
   // *** Функция для перерендеринга заметок ***
   var updateNotes = function (data) {
     window.renderNote(data);
-
-    console.log(data);
+    
 
     var notesList = document.querySelector(".notes-list");
     var notesItems = notesList.querySelectorAll(".notes-list__item");

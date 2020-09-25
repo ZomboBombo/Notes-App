@@ -102,8 +102,6 @@ window.editNote = (function () {
         Ветка "else if" — удаление заметки.
       */
       if (evt.target.id === editButtons[j].id) {
-        console.log(evt.target);
-        console.log(notes[j]);
         // *** Вызов функции редактирования текста заметки ***
         editTextOfNote(j);
         break;
