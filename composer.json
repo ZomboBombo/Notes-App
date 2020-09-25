@@ -1,0 +1,11 @@
+{
+  "name": "foxin/notes-app",
+  "description": "App for Notes.",
+  "authors": [
+      {
+          "name": "Sergey Novikov",
+          "email": "foxinazombobombo@mail.ru"
+      }
+  ],
+  "require": {}
+}
