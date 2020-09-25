@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,6 +7,75 @@
 		<link rel="stylesheet" type="text/css" href="source/css/styles.min.css">
 	</head>
 	<body>
-		<h1>Это приложение для работы с Заметками</h1>
+		<header class="site-header">
+      <div class="site-header__sort-buttons">
+  			<button type="button">Сортировать по Дате</button>
+  			<button type="button">Избранное</button>
+      </div>
+
+      <button type="button" class="site-header__create-note-button">Создать заметку</button>
+		</header>
+
+		<main class="site-content">
+			<h1 class="visually-hidden">Приложение для работы с Заметками</h1>
+
+			<ul class="notes-list">
+        <!-- Сюда будут выводиться заметки -->
+			</ul>
+		</main>
+
+		<footer class="site-footer">
+			<p>Copyright 2020. All rights reserved.</p>
+			<p>Author: Sergey Novikov</p>
+		</footer>
+
+
+    <!-- Модальное окно -->
+    <div class="modal modal--overlay"></div>
+    <section class="modal modal--window">
+      <h2 class="visually-hidden">Редактирование заметки</h2>
+
+      <input type="text" class="modal__note-name">
+      <textarea class="modal__note-description"></textarea>
+      <p>
+        <span>Дата изменения:</span>
+        <span class="modal__note-creation-date"></span>
+      </p>
+
+      <button type="button" class="modal__close-button">Закончить редактирование</button>
+    </section>
+
+
+    <!-- Шаблон Заметки -->
+    <template id="note-template">
+      <li class="notes-list__item">
+        <article class="note">
+          <h2 class="note__name">
+            <span class="note__name-number">Номер заметки:</span>
+            <span class="note__name-text">Имя заметки</span>
+          </h2>
+
+          <p class="note__description">Текст заметки</p>
+
+          <span class="note__creation-date">Дата создания заметки</span>
+
+          <div class="note__actions">
+            <label class="note__favorites">
+              <input class="note__input-checkbox" type="checkbox" name="favorite-note">
+              <span class="note__input-text">Добавить в избранное</span>
+            </label>
+
+            <button type="button" class="note__button" id="editNoteButton">Редактировать</button>
+            <button type="button" class="note__button" id="removeNoteButton">Удалить</button>
+          </div>
+        </article>
+      </li>
+    </template>
+
+
+    <!-- Скрипты -->
+    <script src="source/js/renderNote.js"></script>
+    <script src="source/js/notesMock.js"></script>
+    <script src="source/js/editNote.js"></script>
 	</body>
 </html>
