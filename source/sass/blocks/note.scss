@@ -1,0 +1,76 @@
+.note {
+  display: flex;
+  flex-direction: column;
+
+  width: auto;
+  min-height: 200px;
+
+  padding: 0 20px;
+
+  border: 1px solid $gray;
+
+  box-shadow: 0 2px 6px 0 $gray;
+
+  transition-duration: 0.1s;
+  transition-timing-function: ease;
+  transition-property: box-shadow, transform;
+}
+
+.note__name {
+  padding-bottom: 15px;
+
+  text-align: center;
+
+  border-bottom: 1px solid $gray;
+}
+
+.note__creation-date {
+  margin-left: auto;
+
+  color: $gray;   
+}
+
+.note__actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+
+  border-top: 1px solid $gray;
+}
+
+.note__favorites {
+  display: inline-block;
+
+  margin-bottom: 15px;
+}
+
+
+// *** Свойства для интерактивности ***
+.note:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px 2px $gray;
+  cursor: pointer;
+}
+
+
+/*
+___________________________________________
+
+--- МЕДИА для ширины вьюпорта "Планшет" ---
+___________________________________________
+
+*/
+@media (min-width: $width--tablet) {
+  .note{
+    width: 280px;
+    min-height: 400px;
+  }
+
+  .note__creation-date {
+    margin-top: auto;
+  }
+}

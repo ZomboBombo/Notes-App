@@ -1,0 +1,13 @@
+.site-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  min-height: 60px;
+
+  background-color: $gray--light;
+
+  border-top: 1px solid $gray;
+}

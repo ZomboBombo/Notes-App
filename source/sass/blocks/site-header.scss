@@ -1,0 +1,18 @@
+.site-header {
+  position: fixed;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  min-height: 60px;
+
+  background-color: $gray--light;
+
+  border-bottom: 1px solid $gray--light;
+
+  box-shadow: 0 0 6px 1px $gray;
+  z-index: 1;
+}

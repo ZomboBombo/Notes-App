@@ -1,1 +1,20 @@
+/* ***********************
+*** 1. Служебные стили ***
+*********************** */
+@import "normalize.scss";
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+
+
+/* **********************
+*** 2. Основные стили ***
+********************** */
 @import "blocks/body.scss";
+@import "blocks/site-header.scss";
+@import "blocks/site-content.scss";
+@import "blocks/notes-list.scss";
+@import "blocks/note.scss";
+@import "blocks/site-footer.scss";
+@import "blocks/modal.scss";

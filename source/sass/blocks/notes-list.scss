@@ -1,0 +1,35 @@
+.notes-list {
+  @include markerless;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  width: auto;
+}
+
+.notes-list__item {
+  display: flex;
+  
+  margin: 10px 0;
+}
+
+
+/*
+___________________________________________
+
+--- МЕДИА для ширины вьюпорта "Планшет" ---
+___________________________________________
+
+*/
+@media (min-width: $width--tablet) {
+  .notes-list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .notes-list__item {
+    margin: 10px;
+  }
+}
