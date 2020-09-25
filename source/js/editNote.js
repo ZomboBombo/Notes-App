@@ -44,7 +44,7 @@ window.editNote = (function () {
 
     // --- Обновление даты создания заметки ---
     var currentDate = new Date();
-    var noteCreationDate = currentDate.getDate() + '/' + (currentDate.getMonth() + 1) + '/' + currentDate.getFullYear();
+    var noteCreationDate = (currentDate.getMonth() + 1) + '/' + currentDate.getDate() + '/' + currentDate.getFullYear();
 
     modalWindow.querySelector(".modal__note-creation-date").textContent = noteCreationDate;
 
